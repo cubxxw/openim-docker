@@ -1,0 +1,15 @@
+name: 'Lock Threads'
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  lock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Lock Threads'
+        uses: dessant/lock-threads@v4
+        if: env.GITHUB_TOKEN != ''
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
