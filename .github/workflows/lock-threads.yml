@@ -14,3 +14,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-lock-inactive-days: '30'
           pr-lock-inactive-days: '30'
+          pr-lock-inactive-days: '30'
